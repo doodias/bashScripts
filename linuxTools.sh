@@ -13,6 +13,7 @@ echo "
 [4] - limpar temporários
 [5] - Limpar cache do Snap
 [6] - Limpar cache do Flatpak
+[7] - Verificar saúde da bateria
 [0] - Sair
    
 ***********************************************
@@ -44,6 +45,14 @@ case $option in
      6)
          echo "Limpando cache do Flatpak..."
          flatpak uninstall --unused -y
+         ;;
+    7)
+         echo "Verificando saúde da bateria..."
+         echo "Checking battery health..."
+         upower -i /org/freedesktop/UPower/devices/battery_BAT0 > ~/Documentos/battery_health.txt
+         clear
+         echo "Verificação Concluida. Resultados salvos em ~/Documentos/battery_health.txt"
+         sleep 2
          ;;
      0)
          echo "Saindo..."
