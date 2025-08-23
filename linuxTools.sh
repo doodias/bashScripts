@@ -48,7 +48,6 @@ case $option in
          ;;
     7)
          echo "Verificando saúde da bateria..."
-         echo "Checking battery health..."
          upower -i /org/freedesktop/UPower/devices/battery_BAT0 > ~/Documentos/battery_health.txt
          clear
          echo "Verificação Concluida. Resultados salvos em ~/Documentos/battery_health.txt"
