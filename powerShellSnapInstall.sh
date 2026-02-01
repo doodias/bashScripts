@@ -8,6 +8,5 @@ sudo ln -s /var/lib/snapd/snap /snap
 # Instalção do PowerShell
 sudo snap install powershell --classic
 
-# Fim do Script
 
 
